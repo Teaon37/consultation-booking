@@ -23,7 +23,7 @@ export function getNextStep(
   current: StepId,
   customerAnswers: CustomerAnswers,
   _feedbackAnswers: FeedbackAnswers,
-  options: SurveyFlowOptions = {},
+  _options: SurveyFlowOptions = {},
 ): StepId {
   if (current === 'start') return 'b1'
 
@@ -40,9 +40,7 @@ export function getNextStep(
     return CUSTOMER_QUESTIONS[customerIndex + 1].id
   }
 
-  if (current === 'b9') {
-    return options.embedded ? 'q1' : 'mvp-intro'
-  }
+  if (current === 'b9') return 'mvp-intro'
 
   if (current === 'mvp-intro') return 'q1'
 
@@ -73,7 +71,7 @@ export function getPreviousStep(
 
   if (current === 'q1') {
     if (options.feedbackOnly) return null
-    return options.embedded ? 'b9' : 'mvp-intro'
+    return 'mvp-intro'
   }
 
   if (current === 'q10') return 'q9'
@@ -104,7 +102,7 @@ export function getProgressSteps(
   const steps: StepId[] = options.feedbackOnly
     ? []
     : options.embedded
-      ? [...CUSTOMER_QUESTIONS.map((q) => q.id)]
+      ? [...CUSTOMER_QUESTIONS.map((q) => q.id), 'mvp-intro']
       : ['start', ...CUSTOMER_QUESTIONS.map((q) => q.id), 'mvp-intro']
 
   steps.push(...FEEDBACK_QUESTIONS.map((q) => q.id))

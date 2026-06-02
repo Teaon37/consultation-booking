@@ -16,6 +16,7 @@ import type {
   StepId,
   SurveyFlowOptions,
 } from '../types'
+import { SurveyMvpIntroScreen } from './SurveyMvpIntroScreen'
 import { SurveyProgressBar } from './SurveyProgressBar'
 import { SurveyQuestionStep } from './SurveyQuestionStep'
 import { SurveyToast } from './SurveyToast'
@@ -65,9 +66,10 @@ export function SurveyFlow({
   }, [currentQuestion, customerAnswers, feedbackAnswers])
 
   const canProceed = useMemo(() => {
+    if (step === 'mvp-intro') return true
     if (!currentQuestion) return true
     return isAnswerValid(currentAnswer, currentQuestion.id)
-  }, [currentQuestion, currentAnswer])
+  }, [step, currentQuestion, currentAnswer])
 
   const showProgress = step !== 'early-exit' && step !== 'complete'
 
@@ -144,6 +146,7 @@ export function SurveyFlow({
   }, [step, customerAnswers, feedbackAnswers, flowOptions, onBack])
 
   const nextLabel = useMemo(() => {
+    if (step === 'mvp-intro') return 'MVP 체험 완료 후 피드백 시작'
     const next = getNextStep(step, customerAnswers, feedbackAnswers, flowOptions)
     if (next === 'complete') return '제출하기'
     if (next === 'early-exit') return '다음'
@@ -204,6 +207,8 @@ export function SurveyFlow({
       )}
 
       <div className="survey-card">
+        {step === 'mvp-intro' && <SurveyMvpIntroScreen />}
+
         {currentQuestion && (
           <SurveyQuestionStep
             question={currentQuestion}

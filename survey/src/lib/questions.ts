@@ -64,8 +64,8 @@ export const CUSTOMER_QUESTIONS: QuestionConfig[] = [
   },
   {
     id: "b6",
-    title: "B6. 대출 시 가장 중요하게 보는 요소",
-    type: "single",
+    title: "B6. 대출 시 가장 중요하게 보는 요소 (중복선택)",
+    type: "multi",
     options: [
       "금리",
       "한도",
@@ -81,8 +81,8 @@ export const CUSTOMER_QUESTIONS: QuestionConfig[] = [
   },
   {
     id: "b7",
-    title: "B7. 대출을 알아보는 방법",
-    type: "single",
+    title: "B7. 대출을 알아보는 방법 (중복선택)",
+    type: "multi",
     options: [
       "은행 방문",
       "인터넷 검색",
@@ -99,7 +99,13 @@ export const CUSTOMER_QUESTIONS: QuestionConfig[] = [
     id: "b8",
     title: "B8. 원하는 만큼 대출이 나오지 않아 다른 방법을 찾아본 경험",
     type: "single",
-    options: ["있음", "없음"],
+    options: [
+      "있음",
+      "없음",
+      "기타(어떤 방법으로 했는지? [예 : 대출 전화, 부동산 소개등])",
+    ],
+    allowOther: true,
+    otherLabel: "기타(어떤 방법으로 했는지? [예 : 대출 전화, 부동산 소개등])",
     section: "customer",
   },
   {

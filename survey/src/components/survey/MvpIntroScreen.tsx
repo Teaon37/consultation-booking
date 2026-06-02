@@ -25,7 +25,7 @@ export function MvpIntroScreen({ onContinue }: MvpIntroScreenProps) {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold">MVP 안내</h2>
+            <h2 className="text-lg font-semibold">MVP 테스트 안내</h2>
             <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
               현재 버전은 실제 서비스 출시 전 MVP 테스트 버전입니다.
               <br />
@@ -40,7 +40,7 @@ export function MvpIntroScreen({ onContinue }: MvpIntroScreenProps) {
               <br />
               신뢰가 가지 않았던 부분,
               <br />
-              상담 신청을 망설이게 된 이유 등을 자유롭게 말씀해주세요.
+              상담 신청을 망설이게 된 이유 등을 자유롭게 말씀해 주세요.
             </p>
           </div>
         </div>
