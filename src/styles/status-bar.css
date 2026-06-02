@@ -1,0 +1,18 @@
+.status-bar-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+  object-position: top center;
+  user-select: none;
+  pointer-events: none;
+}
+
+@media (max-width: 429px) {
+  .status-bar-image {
+    display: none;
+  }
+}

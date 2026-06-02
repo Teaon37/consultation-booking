@@ -1,0 +1,86 @@
+.splash-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: default;
+  text-align: inherit;
+  font: inherit;
+  color: inherit;
+}
+
+.splash-bg-ribbon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  max-height: 42%;
+  object-fit: cover;
+  object-position: center bottom;
+  pointer-events: none;
+  user-select: none;
+}
+
+.splash-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 24px 80px;
+}
+
+.splash-branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: splash-brand-fade-in 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.splash-logo-mark {
+  display: block;
+  width: 88px;
+  height: auto;
+  object-fit: contain;
+}
+
+.splash-brand-name {
+  margin: 16px 0 0;
+  font-size: 2.125rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #1a1a1a;
+  text-transform: lowercase;
+}
+
+.splash-tagline {
+  margin: 12px 0 0;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #8e8e8e;
+  letter-spacing: -0.01em;
+}
+
+@keyframes splash-brand-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

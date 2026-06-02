@@ -1,0 +1,195 @@
+.counselor-connect-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.counselor-connect-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 90% 45% at 50% 100%, rgba(246, 232, 220, 0.45), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.counselor-connect-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.counselor-connect-header {
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.counselor-connect-back-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.counselor-connect-title {
+  margin: 14px 0 0;
+  font-size: 1.375rem;
+  font-weight: 800;
+  line-height: 1.32;
+  letter-spacing: -0.03em;
+  color: #1a1f27;
+}
+
+.counselor-connect-subtitle {
+  margin: 8px 0 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #8e8e93;
+}
+
+.counselor-connect-card-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 8px 0;
+}
+
+.counselor-connect-card {
+  width: 100%;
+  margin-top: 0;
+  padding: 16px 16px 18px;
+  border-radius: 18px;
+  background: #fff9e8;
+  border: 1px solid #f5e6b8;
+  opacity: 0;
+  transform: translateY(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counselor-connect-card--visible {
+  animation: counselor-card-in 0.5s ease forwards;
+}
+
+@keyframes counselor-card-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counselor-connect-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.counselor-connect-illustration {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff4d1;
+}
+
+.counselor-connect-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.counselor-connect-status {
+  margin: 16px 0 0;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1f27;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.counselor-connect-wait {
+  margin: 6px 0 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #8e8e93;
+  text-align: center;
+}
+
+.counselor-connect-progress {
+  margin-top: 16px;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.counselor-connect-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #f2b705;
+  transition: width 0.12s linear;
+}
+
+.counselor-connect-footer {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  padding: 8px 20px 24px;
+}
+
+.counselor-connect-book-btn {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 14px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.97rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.counselor-connect-book-btn:active {
+  opacity: 0.92;
+}
+
+.counselor-connect-skip-btn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #8e8e93;
+  cursor: pointer;
+}
+
+.counselor-connect-skip-btn:active {
+  opacity: 0.7;
+}

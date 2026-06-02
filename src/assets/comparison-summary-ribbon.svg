@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" fill="none" aria-hidden="true">
+  <path
+    d="M20 80C40 60 55 20 90 10C95 8 100 15 95 25C85 45 70 70 40 85C30 90 15 88 20 80Z"
+    fill="#FFE566"
+    fill-opacity="0.55"
+  />
+  <path
+    d="M35 75C50 58 62 35 85 28C88 27 92 32 88 40C80 55 68 72 48 82C42 85 32 82 35 75Z"
+    fill="#FFC72C"
+    fill-opacity="0.45"
+  />
+  <path
+    d="M55 50C65 38 75 30 95 25C98 24 100 28 97 34C90 45 78 58 62 65C58 67 52 65 55 50Z"
+    fill="#F2B705"
+    fill-opacity="0.35"
+  />
+</svg>

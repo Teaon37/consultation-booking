@@ -1,0 +1,262 @@
+.cc-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.cc-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 120% 55% at 50% 100%, rgba(255, 214, 120, 0.2), transparent 68%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cc-header {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  padding: 4px 20px 0;
+}
+
+.cc-back-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cc-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px 20px;
+}
+
+.cc-card {
+  width: 100%;
+  max-width: 350px;
+  padding: 22px 18px 18px;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.08);
+}
+
+.cc-popup {
+  opacity: 0;
+  transform: scale(0.85) translateY(12px);
+  animation: cc-popup-in 0.5s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+}
+
+.cc-message.cc-popup {
+  animation-delay: 0.06s;
+}
+
+@keyframes cc-popup-in {
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.cc-ribbon-hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.cc-ribbon-glow {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 233, 140, 0.55) 0%, rgba(255, 249, 232, 0.2) 70%, transparent 100%);
+}
+
+.cc-ribbon-image {
+  position: relative;
+  z-index: 1;
+  width: 72px;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.cc-sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 199, 44, 0.45);
+  pointer-events: none;
+}
+
+.cc-sparkle--1 {
+  width: 6px;
+  height: 6px;
+  top: 14px;
+  right: 12px;
+}
+
+.cc-sparkle--2 {
+  width: 4px;
+  height: 4px;
+  top: 28px;
+  left: 10px;
+  opacity: 0.7;
+}
+
+.cc-sparkle--3 {
+  width: 5px;
+  height: 5px;
+  bottom: 18px;
+  right: 20px;
+  opacity: 0.55;
+}
+
+.cc-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  color: #1a1f27;
+  text-align: center;
+}
+
+.cc-desc {
+  margin: 8px 0 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #8e8e93;
+  text-align: center;
+}
+
+.cc-desc--emphasis {
+  margin-top: 2px;
+}
+
+.cc-divider {
+  margin: 16px 0 14px;
+  height: 1px;
+  background: #f0f0f0;
+}
+
+.cc-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cc-summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cc-summary-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #fff9eb;
+  color: #d4a017;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cc-summary-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cc-summary-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #8e8e93;
+}
+
+.cc-summary-value {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a1f27;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.cc-notice {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff9eb;
+}
+
+.cc-notice-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.cc-notice-icon {
+  color: #e6a800;
+  display: flex;
+  align-items: center;
+}
+
+.cc-notice-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #1a1f27;
+}
+
+.cc-notice-text {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.cc-confirm-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cc-confirm-btn:active {
+  opacity: 0.92;
+}
